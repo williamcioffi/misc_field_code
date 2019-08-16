@@ -8,7 +8,8 @@ matchtimes <- function(t1, t2) {
 
 library(plotKML)
 
-a1 <- readGPX("file.gpx")
+fname <- file.choose()
+a1 <- readGPX(fname)
 
 tracks <- as.data.frame(a1$tracks)
 names(tracks) <- c("lon", "lat", "elevation", "time")
